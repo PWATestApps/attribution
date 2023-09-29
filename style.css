@@ -1,0 +1,23 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  color: #373fff;
+}
+
+#header-right{
+  position : fixed;
+  top : 0;
+  right : 0;
+}
+
+#footer{
+  font-family: helvetica, arial, sans-serif;
+  font-size: x-small;
+  position : fixed;
+  bottom : 0;
+}

@@ -1,0 +1,18 @@
+THIRD PARTY SOFTWARE NOTICES AND INFORMATION
+Do Not Translate or Localize
+
+This software incorporates material from third parties.
+
+Notwithstanding any other terms, you may reverse engineer this software to the
+extent required to debug changes to any libraries licensed under the GNU Lesser
+General Public License.
+
+---
+
+test icon
+Created by DinosoftLabs
+from Noun Project
+https://thenounproject.com/icon/test-1275765/
+
+Licensed under CC by 3.0 DEED
+Attribution 3.0 Unported

@@ -1,0 +1,7 @@
+{
+    "id": "attribution_pwa",
+    "msa": "{guid}",
+    "ios": "apwa_ios",
+    "android": "apwa_android",
+    "windows_universal": "apwa_uwp"
+}
