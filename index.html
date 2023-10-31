@@ -1,18 +1,38 @@
 <html lang="en">
-<head>
+  <head>
     <title>Attribution PWA</title>
 
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="style.css">
-    <script src="register-sw.js"></script>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="register-sw.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="apple-touch-icon" href="icons/icon-180x180.png">
-</head>
+    <link rel="apple-touch-icon" href="icons/icon-180x180.png" />
+    <link
+      rel="stylesheet"
+      media="(prefers-color-scheme:light)"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.73/dist/themes/light.css"
+    />
+    <link
+      rel="stylesheet"
+      media="(prefers-color-scheme:dark)"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.73/dist/themes/dark.css"
+      onload="document.documentElement.classList.add('sl-theme-dark');"
+    />
 
-<body>
-    <P>Landing page for the PWA</P>
-</body>
+    <script type="module" src="/src/app-index.ts"></script>
+  </head>
+
+  <body>
+    <!-- Our app-index web component. This component is defined in src/pages/app-index.ts-->
+    <app-index></app-index>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js');
+      }
+    </script>
+  </body>
 </html>
