@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta http-equiv="origin-trial"
+        content="AkJLziV412NUQqPW2IAlpix6/iDNrc3aTm4o5gzD9j09pSrTq/cWdUgPiTe1y7aVGrFilozKb/Pbw2Np6IJT0JQAAAB0eyJvcmlnaW4iOiJodHRwczovL3B3YXRlc3RhcHBzLmdpdGh1Yi5pbzo0NDMiLCJpc1N1YmRvbWFpbiI6ZmFsc2UsImZlYXR1cmUiOiJtc0FjcXVpc2l0aW9uSW5mbyIsImV4cGlyeSI6MTcxNjI0OTYwMH0=">
+    <link rel="stylesheet" href="style.css">
+</head>
+<title>Acquisition Info API Testing</title>
+
+<body>
+    <a href="index.html">Go back to landing page</a>
+    <div class="container">
+        <h2>Acquisition Info API Testing</h2>
+        <p>This PWA's campaign ID is: <span id="campaign-id"></span></p>
+        <button onclick="getCampaignId()">Get Campaign ID</button>
+    </div>
+</body>
+
+</html>
+
+<script>
+    async function getCampaignId() {
+        const details = await navigator.acquisitionInfoProvider.getDetails();
+        if (details.campaignId === "") {
+            document.getElementById("campaign-id").textContent = "No campaign ID associated with this app";
+        } else if (details.campaignId === null) {
+            document.getElementById("campaign-id").textContent = "Error retrieving campaign ID, check console for details.";
+        } else {
+            document.getElementById("campaign-id").textContent = details.campaignId;
+        }
+    }
+</script>
