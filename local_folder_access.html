@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <meta http-equiv="origin-trial"
+        content="AjbbKs7u/4fjyvgZDyXTsMxEDvqLNYV3iABOo3Pl3+RJgCM5XUkybGVOr3HFfwRf1qqlD7JjZl1sHG/YL8huV4sAAAB0eyJvcmlnaW4iOiJodHRwczovL3B3YXRlc3RhcHBzLmdpdGh1Yi5pbzo0NDMiLCJpc1N1YmRvbWFpbiI6ZmFsc2UsImZlYXR1cmUiOiJXZWJBcHBMb2NhbEZvbGRlciIsImV4cGlyeSI6MTcxODg0MTYwMH0=">
+    <link rel="stylesheet" href="style.css">
+</head>
+<title>Testing OT for Local Folder Access</title>
+
+<body>
+    <a href="index.html">Go back to landing page</a>
+    <h3>List of web app directories, should include local folder if OT token is functioning correctly:</h3>
+    <ul id="list"></ul>
+    <script>
+        const list = document.getElementById('list');
+        let opfs = await navigator.storage.getDirectory();
+        for await (let entry of opfs.entries()) {
+            let listItem = document.createElement('li');
+            listItem.textContent = entry.name;
+            list.appendChild(listItem);
+        }
+    </script>
+</body>
+
+</html>

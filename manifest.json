@@ -10,7 +10,12 @@
 	"orientation" : "any",
 	"background_color": "#1976d2",
 	"theme_color": "#1976d2",
-	"related_applications" : [],
+	"related_applications" : [
+		{
+		"platform": "windows",
+        "id": "pwatestapps.github.io!App"
+		}
+	],
 	"prefer_related_applications" : false,
     "icons" : [
 		{
